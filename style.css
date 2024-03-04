@@ -11,3 +11,8 @@ body {
 p {
     font-size: 15px; /* You can adjust the font size as needed */
 }
+
+        img {
+            display: block;
+            margin: auto; /* Center the image */
+        }
