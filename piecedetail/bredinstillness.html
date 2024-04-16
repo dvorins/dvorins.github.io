@@ -4,15 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>bred in stillness</title>
+<style>
+    /* Styles */
+    #pdf-viewer {
+        width: 80%;
+        height: 600px; /* Adjust the height as needed */
+        display: block;
+        margin: 0 auto; /* Center the PDF viewer horizontally */
+    }
+
+    .pdf-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1, p {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Center the iframe horizontally */
+    iframe {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Adjust the styling for the SoundCloud credits */
+    .soundcloud-credits {
+        font-size: 10px;
+        color: #cccccc;
+        line-break: anywhere;
+        word-break: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+        font-weight: 100;
+        text-align: center;
+        margin-top: 10px; /* Add some spacing at the top */
+    }
+</style>
 </head>
 <body>
+
 <h1>bred in stillness</h1>
+
+<a href="../piecedetail.html">Back</a> 
+
+<p>Written in the summer of 2023, bred in stillness brings together the poetry of Emma DeLaRosa with music written by Dvorin. Performed by Nicholas Salerno's chamber ensemble in December of 2023, the piece featured the spoken word performance of Karen Klein. DeLaRosa's poetry deals with stillness, isolation, and stagnation in various stages of life. Dvorin's music serves as another player in the drama that unfolds, framing the scenes and providing an added depth to DeLaRosa's poetry.</p>
+
+<!-- Container for centering -->
+<div class="pdf-container">
+    <!-- Embedded PDF viewer -->
+    <embed id="pdf-viewer" src="../bred in stillness - Full Score.pdf" type="application/pdf" />
+</div>
+
+<!-- SoundCloud iframe -->
+<iframe width="80%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1727671047&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+<!-- SoundCloud credits -->
+<div class="soundcloud-credits">
+    <a href="https://soundcloud.com/samuel-dvorin" title="sam dvorin" target="_blank" style="color: #cccccc; text-decoration: none;">sam dvorin</a> · <a href="https://soundcloud.com/samuel-dvorin/bred-in-stillness" title="Bred In Stillness" target="_blank" style="color: #cccccc; text-decoration: none;">Bred In Stillness</a>
+</div>
 
 <br>
 <br>
 <br>
 <br>
-<a href="../piecedetail.html">back</a> 
+
 
 </body>
 </html>
