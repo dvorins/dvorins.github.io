@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>stochastic looper</title>
+</head>
+<body>
+    <h1>stochastic looper built in max</h1>
+<img src="./img2.png" width="500">
+<br>
+<button onclick="downloadFile()">Download patch</button>
+
+<script>
+function downloadFile() {
+  // Path to your file
+  var file = './stochasticlooper.maxpat';
+  // Create an anchor element
+  var a = document.createElement('a');
+  // Set the href attribute to the file path
+  a.href = "data:text/plain;charset=utf-8," + encodeURIComponent(file); // Change data type and encoding
+  // Set the download attribute with the desired filename
+  a.download = 'stochasticlooper.maxpat';
+  // Append the anchor element to the document body
+  document.body.appendChild(a);
+  // Trigger a click event on the anchor element
+  a.click();
+  // Remove the anchor element from the document body
+  document.body.removeChild(a);
+}
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<a href="index.html">back</a> 
+
+</body>
+</html>
