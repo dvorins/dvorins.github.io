@@ -15,6 +15,18 @@ body {
   flex-direction: column;
   font-family: sans-serif;
 }
+#pdf-viewer {
+        width: 80%;
+        height: 50vh;
+        display: block;
+        margin: 0 auto; 
+    }
+
+    .pdf-container {
+        display: flex;
+        justify-content: center;
+    }
+
 
 /* Container for scrollable content */
 .archive-row {
@@ -55,6 +67,10 @@ body {
 
 }
 
+.archive-item iframe {
+    height: 50vh !important;
+}
+
 .archive-item > * {
   break-inside: avoid-column;
   margin-bottom: 1.5rem;
@@ -74,6 +90,12 @@ body {
     width: 15vw;
 }
 
+.examples {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+        }
 
 
 h1 {
@@ -154,6 +176,23 @@ h1 {
 
 
             <div class="archive-item" style="width: 10vw !important;"></div>
+
+            <div class="archive-item">
+                <h2>Merch Design</h2>
+
+                <p>I have screen printed merch for myself and others.  </p>
+    <div class="examples">
+        <img src="examples/merch1.jpeg" alt="Merch 1">
+        <img src="examples/merch2.jpeg" alt="Merch 2">
+        <img src="examples/merch3.jpeg" alt="Merch 3">
+        <img src="examples/IMG_1404.jpeg">
+        <img src="examples/merch5.jpeg" alt="Merch 5">
+    </div>
+
+
+
+
+            </div>
             <div class="archive-item">
 
     <h2>stochastic looper built in max</h2>
@@ -197,6 +236,31 @@ h1 {
 
             <div class="archive-item" style="width: 40vw !important;"></div>
 
+            <div class="archive-item">
+
+
+
+<h2>for lorenzo</h2>
+
+
+
+<p>Written from spring to fall of 2023, this piece represents a lot to me.  
+    It is the culmination of a four year long friendship with violinist and conductor Lorenzo Gallegos.
+    This piece took a lot to write, rehearse, and perform. <br> 
+    It is my most ambitious purely instrumental piece to date.
+    Thematically, the piece is about the violence of perfection.  <br>
+    With each step, the performer must play at the highest level of ability, while pushing forward.
+    In vain, the performer tries to return to the beautiful, electric freedom of the first movement, <br>but is brought down by external forces.
+    For Lorenzo is about perseverance, about skill, and about what it means to be in command of yourself as an artist.</p>
+
+<!-- Container for centering -->
+<div class="pdf-container">
+    <!-- Embedded PDF viewer -->
+    <embed id="pdf-viewer" src="forlorenzomarkings.pdf" type="application/pdf" />
+</div>
+
+            </div>
+
             <!--/////-->
 
             <div class="archive-item">
@@ -235,6 +299,29 @@ h1 {
             </code></pre>
             </div>
 
+
+
+            <div class="archive-item">
+
+
+                <h2>bred in stillness</h2>
+
+                <div class="pdf-container">
+                    <!-- Embedded PDF viewer -->
+                    <embed id="pdf-viewer" src="bred in stillness - Full Score.pdf" type="application/pdf" />
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
             <div class="archive-item">
 
                 <pre>
@@ -266,6 +353,25 @@ h1 {
         transition = transition_arrays(ascii_array1, ascii_array2)
         </code></pre>
             </div>
+
+            <div class="archive-item" style="width: 160vw;">
+
+                <h2>scenes from caved in </h2>
+                <div class="examples">
+                <img src="assets/cavedin/cavedin.png" width="100" >
+                <img src="assets/cavedin/cavedin2.png"width="100" >
+                <img src="assets/cavedin/cavedin3.png" width="100" >
+                <img src="assets/cavedin/cavedin4.png" width="100" >
+                <img src="assets/cavedin/cavedin5.png" width="100" >
+                <img src="assets/cavedin/cavedin6.png" width="100" >
+            </div>
+
+
+
+            </div>
+
+
+
 
             <div class="archive-item">
                 <pre>
@@ -335,7 +441,37 @@ h1 {
                 <img src="archive2.jpg">
             </div>
 
-      
+            
+
+            
+            
+
+<div class="archive-item">
+<div class="pdf-container">
+    <!-- Embedded PDF viewer -->
+    <embed id="pdf-viewer" src="each night i carry myself to you.pdf" type="application/pdf" />
+</div>
+<div class="archive-item">
+    <h2>each night i carry myself to you</h2>
+
+
+
+    <p>Written in 2022 over the course of the entire year, each night i carry myself to you is a one act chamber opera in three scenes. <br> The libretto, written by Dvorin and 
+        Isabella Putorti, deals with two characters.  One is stuck in their ways, unable to have the empathy to see the other.<br>  The other, childlike, is upset and tried in vain to seek comfort from the other.
+        Devoid of place, time, gender, the story deals with how grief and comfort can go wrong.  <br>The original performance featured Natalia D. Perera-Del Valle and Chujun Li, with Nicholas Salerno conducting his ensemble.
+    </p>
+
+
+
+</div>
+<div class="archive-item">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YDDuXtDfDlQ?si=nlD0UGpGQpW-MSzY&amp;start=1075" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+           
+
+
+
+
 
             <!--/////-->
             <div class="archive-item">
@@ -546,17 +682,7 @@ h1 {
                     allowfullscreen></iframe>
             </div>
 
-                <div class="archive-item">
-                    <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/YDDuXtDfDlQ?si=P6WRYYCIHDpBcpaM"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write;
-                        encrypted-media; gyroscope; picture-in-picture;
-                        web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen></iframe>
-                </div>
-
+         
               
              
                 <div class="archive-item" style="width: 300vw !important;">
@@ -601,7 +727,7 @@ h1 {
         <nav>
             <a href="about.html">about</a>
             <a href="music.html">music</a>
-            <a href="projects.html">projects</a>
+            
             <a href="index.html">back</a>
             <a href="hire.html">for hire</a>
         </nav>
