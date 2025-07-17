@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+   body {
+  font-family: sans-serif;
+  padding: 2rem;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  position: absolute;
+  bottom: -.1em;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 15vw;
+  font-weight: bold;
+  line-height: 0.85;
+  text-align: center;
+  transform: scaleX(1.3);
+  display: block;
+  z-index: -99;
+}
+
+nav {
+  position: absolute;
+  bottom: calc(8vw);
+  left: 40%;
+  transform: translateX(-40%);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  font-weight: normal !important;
+}
+
+.album-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.album-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.album {
+  position: relative;
+  flex: 0 0 25vw;
+  max-width: 25vw;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* stack image and info vertically */
+  align-items: stretch;
+  height: auto; /* allow height to grow with info */
+}
+
+.album:hover {
+  filter: brightness(2) saturate(1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.album img {
+  width: 100%;
+  height: 25vw; /* fixed height to keep consistent size */
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.album-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.album:hover .album-title {
+  opacity: 1;
+}
+
+.album .info {
+  display: none;
+  background: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 30vh; /* optional max height */
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.album.expanded .info {
+  display: block;
+}
+
+.album-row.hide-others .album:not(.expanded) {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  filter: blur(2px);
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+  </style>
+  </head>
+  <body>
+
+    <div class="album-row">
+
+      <div class="album">
+        <img src="assets/albumcovers/bredin.png" alt="Bredin">
+
+        <div class="info">
+
+          <h1>Bred in Stillness</h1>
+          <p>Bred in Stillness</p>
+          <p> Written in the summer of 2023, bred in stillness brings together the poetry of Emma DeLaRosa with music written by Dvorin. 
+            Performed by Nicholas Salerno's chamber ensemble in December of 2023, the piece featured the spoken word performance of Karen Klein. 
+            DeLaRosa's poetry deals with stillness, isolation, and stagnation in various stages of life. 
+            Dvorin's music serves as another player in the drama that unfolds, framing the scenes and providing an added depth to DeLaRosa's poetry.
+            This piece was very important for me in thinking about how I can work with text in my music.  
+            I know that I want my music to involve something very real and emotional, and I think that text and human action is the best way to go about this.  
+            With the addition of text, I am able to immediately access very specific emotions.  
+            The speaker acts as a soloist, with a familiar soloist/ ritornello structure emerging in the piece.
+            This was also the first piece that I wrote using a complete electroacoustic model, meaning I modeled the entire piece with samples and synths and then transcribed what I had written.   
+            The harmonies and rhythms of this piece are thus very influenced by nature.  
+            I specifically chose an ensemble that was made up of only "low" instruments for the most part, giving the piece a very dark feeling.  
+            Any sounds that were impossible or difficult for instruments to produce were given to the electronic tape part that follows the players throughout the piece.  
+            Instead of one fixed media part, the tape is cued throughout, so the speaker has the ability to improvise with timing.
+            My favorite section is the eight: Fisherman.  With chords based on distorted spectrums, I try to recreate the feeling of being alone while still being aware of a higher power above you. </p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5rsFz2Wmas4syL2hD8WoEQ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+        </div>
+        
+      </div>
+
+
+      <div class="album">
+        <img src="assets/albumcovers/december.png" alt="December">
+        <div class="info">
+          <h1>December Thing</h1>
+          <p>December Thing</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0a6H5BzbBydgEJalAZMBEV?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/feedback.png" alt="Feedback">
+        <div class="info">
+          <h1>Feedback at the Obrien's</h1>
+          <p>Feedback at the Obrien's</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5TzNjF9Ufo9yfuHFwE3smG?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/instant.png" alt="Instant">
+        <div class="info">
+          <h1>Instant</h1>
+          <p>Instant</p>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/quartets.png" alt="Quartets">
+        <div class="info">
+          <h1>Quartets</h1>
+          <p>Quartets</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2L2FJEJVOI08DIagTVsb8N?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/jimrat.png" alt="Jimrat">
+        <div class="info">
+          <h1>The Jimrat Triology</h1>
+          <p>The Jimrat Triology</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4k2VL1rY587qPtgk8otYOG?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/wantingmore.png" alt="Wanting More">
+        <div class="info">
+          <h1>Wanting More</h1>
+          <p>Wanting More</p>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/butsomeone.png" alt="But Someone">
+        <div class="info">
+          <h1>But someone did and</h1>
+          <p>But someone did and</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/05YMg0lo9vTBDlvQ5EAFyM?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/half.png" alt="Half">
+        <div class="info">
+          <h1>Half</h1>
+          <p>Half</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4JVwSKlJz1BpSTfnYK71uq?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/live.png" alt="Live">
+        <div class="info">
+          <h1>Live from the Smoke Room</h1>
+          <p>Live from the Smoke Room</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2jJY26ZP7b4Y3NNmujx4k6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      <div class="album">
+        <img src="assets/albumcovers/andoutthere.png" alt="And Out There">
+        <div class="info">
+          <h1>And out there everything is turbulent and green</h1>
+          <p>And out there everything is turbulent and green</p>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7wYcrhD60BPx5ib4irMaE8?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+      
+      </div>
+
+
+    </div>
+
+    <nav>
+      <a href="about.html">about</a>
+      <a href="index.html">back</a>
+      <a href="projects.html">projects</a>
+      <a href="archive.html">archive</a>
+      <a href="hire.html">for hire</a>
+    </nav>
+    <h1>dvorin</h1>
+
+  </body>
+
+  <script>
+    const albumRow = document.querySelector('.album-row');
+const albums = document.querySelectorAll('.album');
+
+albums.forEach(album => {
+  album.addEventListener('click', () => {
+    const isExpanded = album.classList.contains('expanded');
+    // Reset all
+    albums.forEach(a => a.classList.remove('expanded'));
+    albumRow.classList.remove('hide-others');
+
+    if (!isExpanded) {
+      album.classList.add('expanded');
+      albumRow.classList.add('hide-others');
+    }
+  });
+});
+
+  </script>
+  
+
+  
+</html>

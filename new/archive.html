@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Archive </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.png" type="image/png">
+        <style>
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent default vertical scroll */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+/* Container for scrollable content */
+.archive-row {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-grow: 1;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  max-height: 70vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+     
+    }
+
+    .archive-row::-webkit-scrollbar {
+      display: none;
+    }
+
+
+/* Individual archive items */
+.archive-item {
+  min-width: 300px;
+  flex: 0 0 auto;
+  margin-right: 2rem;
+  scroll-snap-align: start;
+  padding: 1rem;
+
+  /* Multi-column layout */
+  column-width: 40vw;
+  column-gap: 2rem;
+  column-fill: auto;
+  /* Add background and border for visibility (optional) */
+  background: white;
+
+}
+
+.archive-item > * {
+  break-inside: avoid-column;
+  margin-bottom: 1.5rem;
+  display: block;
+  width: 100%;
+}
+
+
+.archive-item pre,
+.archive-item h2,
+.archive-item img {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+.archive-item img {
+    width: 15vw;
+}
+
+
+
+h1 {
+    position: absolute;
+    font-family: sans-serif;
+    bottom: -.1em;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 15vw;
+    font-weight: bold;
+    line-height: 0.85;
+    text-align: center;
+    transform: scaleX(1.3);
+    display: block;
+
+    }
+
+
+    nav {
+      position: absolute;
+      bottom: calc(8vw); 
+      left: 40%;
+      transform: translateX(-40%);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      font-family: sans-serif;
+      z-index: 10000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 0.5rem;
+    }
+
+  </style>
+    </head>
+
+
+
+
+
+    <body>
+
+        <div class="archive-row">
+
+            <div class="archive-item">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/kHaVskVEqJk?si=3FfNrVGnYoGKkHNI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture;
+                    web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+                    
+            </div>
+
+            <div class="archive-item" style="width: 30vw !important;"></div>
+
+            <div class="archive-item" >
+
+                <img src="archive1.jpg">
+            </div>
+
+            <div class="archive-item">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/1xkGkjqjZFM?si=ELzLtyaTVML1_Wqz"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture;
+                    web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+
+
+            <div class="archive-item" style="width: 10vw !important;"></div>
+            <div class="archive-item">
+
+    <h2>stochastic looper built in max</h2>
+    <img src="./img2.png" width="500">
+    <br>
+    <button onclick="downloadFile()">Download patch</button>
+    
+    <script>
+
+    function downloadFile() {
+     
+      var file = './stochasticlooper.maxpat';
+      
+      var a = document.createElement('a');
+     
+      a.href = "data:text/plain;charset=utf-8," + encodeURIComponent(file); 
+     
+      a.download = 'stochasticlooper.maxpat';
+     
+      document.body.appendChild(a);
+     
+      a.click();
+      
+      document.body.removeChild(a);
+    }
+    </script>
+
+
+            </div>
+
+            <div class="archive-item">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/IdrPMRkMdvo?si=EFz4AqiIf7lHHJ_M"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture;
+                    web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="archive-item" style="width: 40vw !important;"></div>
+
+            <!--/////-->
+
+            <div class="archive-item">
+                <h2>create gif moving from one image in ascii to another</h2>
+                <img src="ascii_transition.gif" width="300">
+            </div>
+
+            <div class="archive-item">
+                <pre>
+                <code>
+        from PIL import Image, ImageFont, ImageDraw
+        import imageio
+        
+        def transition_arrays(array1, array2):
+            transition_arrays = []
+        
+            # Use the size of the smaller array if they are not the same length
+            min_length = min(len(array1), len(array2))
+        
+            # Calculate the number of steps for the transition
+            steps = max(abs(array1[i][j] - array2[i][j]) for i in range(min_length) for j in range(len(array1[i])))
+        
+            # Generate intermediate arrays
+            for step in range(steps + 1):
+                intermediate_array = []
+                for i in range(min_length):
+                    row = []
+                    for j in range(len(array1[i])):
+                        # Calculate the intermediate value for each element
+                        intermediate_value = int(array1[i][j] + (array2[i][j] - array1[i][j]) * step / steps)
+                        row.append(intermediate_value)
+                    intermediate_array.append(row)
+                transition_arrays.append(intermediate_array)
+        
+            return transition_arrays
+            </code></pre>
+            </div>
+
+            <div class="archive-item">
+
+                <pre>
+                <code>
+        def image_to_ascii(image_path, width=100):
+            img = Image.open(image_path)
+            img = img.convert('L')  # Convert to grayscale
+        
+            aspect_ratio = img.height / img.width
+            height = int(width * aspect_ratio)
+        
+            img = img.resize((width, height))
+        
+            ascii_values = []
+            for y in range(height):
+                ascii_row = []
+                for x in range(width):
+                    pixel_value = img.getpixel((x, y))
+                    ascii_row.append(pixel_value)
+                ascii_values.append(ascii_row)
+        
+            return ascii_values
+        
+        # Load images and convert them to ASCII arrays
+        ascii_array1 = image_to_ascii('../IMG_2588.JPG')
+        ascii_array2 = image_to_ascii('../Ren1129_Ren1129-R1-073-35.jpg')
+        
+        # Generate transition between the two ASCII arrays
+        transition = transition_arrays(ascii_array1, ascii_array2)
+        </code></pre>
+            </div>
+
+            <div class="archive-item">
+                <pre>
+            <code>
+        def create_ascii_gif(transition_arrays, output_path, fps=10, first_last_duration=500):
+            # Define font
+            font_path = "/System/Library/Fonts/Andale Mono.ttf"  # Change this to the path of a monospaced font on your system
+            font_size = 12
+            font = ImageFont.truetype(font_path, font_size)
+        
+            # Get the dimensions of the characters in the font
+            char_width, char_height = font.getsize("A")
+        
+            images = []
+            for ascii_array in transition_arrays:
+                # Calculate the dimensions of the image based on the size of the ASCII array and the font
+                width = len(ascii_array[0]) * char_width
+                height = len(ascii_array) * char_height
+        
+                # Create a new image with white background
+                image = Image.new("RGB", (width, height), "white")
+                draw = ImageDraw.Draw(image)
+        
+                # Draw ASCII characters on the image
+                y = 0
+                for row in ascii_array:
+                    x = 0
+                    for char_code in row:
+                        char = chr(char_code)
+                        draw.text((x, y), char, fill="black", font=font)
+                        x += char_width
+                    y += char_height
+        
+                images.append(image)
+                </code></pre>
+            </div>
+
+            <div class="archive-item">
+                <pre>
+                    <code>
+            # Save images to GIF
+            first_frame = images[0]
+            last_frame = images[-1]
+            images = [first_frame] + images + [last_frame]
+            durations = [first_last_duration] + [int(1000 / fps)] * len(transition_arrays) + [first_last_duration]
+        
+            images[0].save(output_path, save_all=True, append_images=images[1:], duration=durations, loop=0)
+        
+        # Example usage
+        output_path = 'ascii_transition.gif'
+        create_ascii_gif(transition, output_path)
+            </code></pre>
+            </div>
+
+            <div class="archive-item">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/pC0Nb7BQ_aY?si=0NaOkdYBhYDX3dL6"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="archive-item" >
+
+                <img src="archive2.jpg">
+            </div>
+
+      
+
+            <!--/////-->
+            <div class="archive-item">
+                <h2>generate random song lyrics and chords based on a corpus</h2>
+                <pre><code>
+      import random
+      
+      def generate_markov_chain(text, order=2):
+          words = text.split()
+          chain = {}
+      
+          for i in range(len(words) - order):
+              current_state = tuple(words[i:i + order])
+              next_word = words[i + order]
+      
+              if current_state in chain:
+                  chain[current_state].append(next_word)
+              else:
+                  chain[current_state] = [next_word]
+      
+          return chain
+        </code></pre>
+            </div>
+
+            <div class="archive-item">
+                <pre>
+            <code>
+      
+      def generate_lyrics(chain, starting_state, length, switch_frequency=20):
+          current_state = starting_state
+          lyrics = list(starting_state)
+      
+          word_count = len(starting_state)
+          while word_count < length:
+              if current_state in chain:
+                  next_word = random.choice(chain[current_state])
+                  lyrics.append(next_word)
+                  current_state = tuple(lyrics[-len(starting_state):])
+                  word_count += 1
+      
+                  # Insert indentation randomly every 9-15 words
+                  if word_count % random.randint(9, 15) == 0:
+                      if lyrics[-1] == ' ':
+                          del lyrics[-1]
+                      lyrics.append('\n')
+      
+                  if word_count % switch_frequency == 0:
+                      current_state = random.choice(list(chain.keys()))
+              else:
+                  current_state = random.choice(list(chain.keys()))
+      
+          if lyrics[0] == ' ':
+              del lyrics[0]
+      
+          return " ".join(lyrics[:length])
+        </code></pre>
+            </div>
+
+            <div class="archive-item">
+                <pre>
+            <code>
+      
+      def add_chords_to_lyrics(lyrics):
+          chords = [
+              "C", "D", "E", "F", "G", "A", "B",
+              "Cm", "Dm", "Em", "Fm", "Gm", "Am", "Bm",
+              "C7", "D7", "E7", "F7", "G7", "A7", "B7",
+              "Cmaj7", "Dmaj7", "Emaj7", "Fmaj7", "Gmaj7", "Amaj7", "Bmaj7",
+              "Cm7", "Dm7", "Em7", "Fm7", "Gm7", "Am7", "Bm7",
+              "Cdim", "Ddim", "Edim", "Fdim", "Gdim", "Adim", "Bdim",
+              "Caug", "Daug", "Eaug", "Faug", "Gaug", "Aaug", "Baug",
+              "Csus2", "Dsus2", "Esus2", "Fsus2", "Gsus2", "Asus2", "Bsus2",
+              "Csus4", "Dsus4", "Esus4", "Fsus4", "Gsus4", "Asus4", "Bsus4"
+          ]
+      
+          loop1 = random.sample(chords, 4)
+          loop2 = random.sample(chords, 4)
+          combined_chord_loop = loop1 + loop2
+      
+          lyrics_lines = lyrics.strip().split('\n')
+          lyrics_with_chords = []
+          for i, line in enumerate(lyrics_lines):
+              chord_index = i % len(combined_chord_loop)
+              chord = combined_chord_loop[chord_index]
+              chord_line = chord.ljust(10)
+              lyrics_with_chords.append(chord_line)
+              lyrics_with_chords.append(line)
+      
+          return '\n'.join(lyrics_with_chords)
+        </code></pre>
+            </div>
+
+            <div class="archive-item">
+                <pre>
+            <code>
+      
+      def generate_song_structure(num_verses, num_choruses, chain, starting_states):
+          song_structure = ""
+          chorus_lyrics = add_chords_to_lyrics(generate_lyrics(chain, random.choice(starting_states[num_verses:]), 50, switch_frequency=20))
+      
+          verse_index = 0
+          chorus_index = 0
+          for i in range(num_verses + num_choruses):
+              if verse_index < num_verses:
+                  song_structure += f"Verse {verse_index + 1}:\n{add_chords_to_lyrics(generate_lyrics(chain, starting_states[verse_index], 100, switch_frequency=20))}\n\n"
+                  verse_index += 1
+      
+              if chorus_index < num_choruses:
+                  song_structure += f"Chorus {chorus_index + 1}:\n{chorus_lyrics}\n\n"
+                  chorus_index += 1
+      
+          return song_structure
+        </code></pre>
+            </div>
+
+            <div class="archive-item">
+                <pre>
+            <code>
+      
+      def generate_song(num_verses, num_choruses, lyrics_text):
+          with open('lyrics.txt', 'r') as file:
+              song_lyrics = file.read()
+          song_lyrics = lyrics_text.strip().lower()
+      
+          chain = generate_markov_chain(song_lyrics, order=2)
+          starting_states = [random.choice(list(chain.keys())) for _ in range(num_verses + num_choruses)]
+          song_structure = generate_song_structure(num_verses, num_choruses, chain, starting_states)
+          return song_structure
+          </code></pre>
+            </div>
+
+            <!--/////-->
+            <div class="archive-item" style="width: 150vw !important;"></div>
+
+            <div class="archive-item">
+                <h2>average pixels of images in a folder</h2>
+                <img src="./7.png">
+                <img src="./10.png">
+
+
+            </div>
+
+            <div class="archive-item">
+                <img src="./17.png">
+
+
+            </div>
+
+            <div class="archive-item">
+            
+             <pre><code>
+      import os
+      import cv2
+      import numpy as np
+      
+      def resize_and_average(image, block_size):
+          resized_image = cv2.resize(image, (image.shape[1] // block_size, image.shape[0] // block_size))
+          averaged_image = np.zeros_like(resized_image)
+          for i in range(0, resized_image.shape[0], block_size):
+              for j in range(0, resized_image.shape[1], block_size):
+                  block = resized_image[i:i+block_size, j:j+block_size]
+                  averaged_color = np.mean(block, axis=(0, 1))
+                  averaged_image[i:i+block_size, j:j+block_size] = averaged_color
+          return averaged_image
+      
+      def process_images(image_folder, output_folder, block_size=5):
+          for filename in os.listdir(image_folder):
+              if filename.endswith(('.jpg', '.jpeg', '.png')):
+                  image_path = os.path.join(image_folder, filename)
+                  image = cv2.imread(image_path)
+                  averaged_image = resize_and_average(image, block_size)
+                  output_path = os.path.join(output_folder, os.path.splitext(filename)[0] + '.png')
+                  cv2.imwrite(output_path, averaged_image)
+      
+      if __name__ == "__main__":
+          input_folder = "/Users/samdvorin/Desktop/JIMRATCODE/412jimratpics"
+          output_folder = "/Users/samdvorin/Desktop/JIMRATCODE/412jimratpics/small"
+          process_images(input_folder, output_folder)
+          </code></pre>
+
+                    </div>
+
+
+
+
+               
+            <div class="archive-item">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/5MPvqwaaqk4?si=mcv60nO494RlR-aD"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture;
+                    web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="archive-item" style="width: 150vw !important;"></div>
+
+            <div class="archive-item">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/SUJkSqo6y9s?si=u3a8ubQBiO9XXyhS"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture;
+                    web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+
+                <div class="archive-item">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/YDDuXtDfDlQ?si=P6WRYYCIHDpBcpaM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write;
+                        encrypted-media; gyroscope; picture-in-picture;
+                        web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+
+              
+             
+                <div class="archive-item" style="width: 300vw !important;">
+
+                    <h2>steal my files (interpret vague file names at your own risk)</h2>
+                    <ul id="fileList">
+                        <!-- Files will be added here -->
+                    </ul>
+                
+
+                </div>
+                <div class="archive-item">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/YWCtrZzMJ4k?si=UWTBuk7VsL9TIA3D"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write;
+                        encrypted-media; gyroscope; picture-in-picture;
+                        web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="archive-item">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/UQKW5hZn844?si=7aFnnjeeQbuDFHXE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write;
+                        encrypted-media; gyroscope; picture-in-picture;
+                        web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+
+
+
+               
+
+            </div>
+
+        </div> <!-- closing .archive-row -->
+
+        <nav>
+            <a href="about.html">about</a>
+            <a href="music.html">music</a>
+            <a href="projects.html">projects</a>
+            <a href="index.html">back</a>
+            <a href="hire.html">for hire</a>
+        </nav>
+        <h1>dvorin</h1>
+
+    </body>
+
+    <script>
+        // Array of file names
+        var fileNames = [
+            "1.omp", "10.omp", "11.omp", "2 more chords.omp", "2.omp", "3 end rhyhtmns.omp", "3 feedback whistle.omp",
+            "3 for real.omp", "3 idea 1.omp", "3 idea 2.omp", "3 to 4.omp", "3+4 chords.omp", "4 chords .omp",
+            "5 chord prog.omp", "5.omp", "6.omp", "7.omp", "8 to 9.omp", "8.omp", "9.omp", "Bb chords.omp",
+            "Eb chords.omp", "F# dis chord material.omp", "Patch 2.omp", "Patch.omp", "SECTION 2 distortions.omp",
+            "aqau acapella speed up.omp", "aqua acapellla.omp", "arugmentRising.omp", "arugmentRisingTesting.omp",
+            "bass chorale.omp", "bass solo.omp", "bassline for woman.omp", "blue.omp", "chord to voice moving BPF.omp",
+            "chord to voice moving random (has textures to use).omp", "chords for mvmt 2.omp", "chords.omp",
+            "chordsForHolding.omp", "clicks.omp", "closest_pitch.omp", "collasping series into cluster.omp",
+            "connecting lines for 4.omp", "create melody from chord.omp", "create rational chord.omp",
+            "creating rumble.omp", "curve drAWER.omp", "elongate sectoin 1 prog.omp", "end of 1 interpols.omp",
+            "falling argument falling motif.omp", "filter-pitch.omp", "flute chords.omp", "generate connection.omp",
+            "guitar tuning stuff.omp", "harmonic material for piece.omp", "harmony for freeze grace note object.omp",
+            "harmony res.omp", "harmony section 2.omp", "high notes.omp", "important chords.omp", "interlude1.omp",
+            "interpols for section 1.omp", "intial recording.omp", "jan string quartet stuff.omp",
+            "knx piano chords 3.28.omp", "knx stuff.omp", "langTest.omp", "melody to notation.omp", "melody.omp",
+            "midi piano.omp", "mod stuff.omp", "morse code chords.omp", "mvmt 1 chords.omp",
+            "mvmt 2 long chords underneath.omp", "mvmt 2 master prog.omp", "mvmt 3 morse.omp", "mvmt 3 rumbe.omp",
+            "overall plan.omp", "perfect girl.omp", "piano arps.omp", "plan of chord progressions.omp",
+            "portg rhythms 1.omp", "preferences.lisp", "prelude (1 + 2).omp", "prelude harmony.omp",
+            "progression to voice moving .omp", "progressions (chords sorted also).omp", "promDrone.omp",
+            "rational function chords.omp", "redo of 5 harmony.omp", "reg rhythms in 3 .omp", "repeated notes object.omp",
+            "rhythm distortion.omp", "rhythm maker.omp", "rhythm modules.omp", "rising object complete.omp",
+            "rising object.omp", "section 2 plan.omp", "section 2 solos.omp", "section 2 tutti.omp",
+            "sheppardActualMusic.omp", "sheppardGroups.omp", "spear tests.omp", "spectrum to midic.omp",
+            "spectrums.omp", "strange_transpose.omp", "stringr ibs.omp", "texture.omp", "trying different freq mod.omp",
+            "two midi tracks to one xml.omp", "vocoder kean.omp", "whatyouwant.omp", "whistles.omp"
+        ];
+        
+
+        // Get the ul element
+        var fileList = document.getElementById("fileList");
+        fileNames.forEach(function(fileName) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = "data:text/plain;charset=utf-8," + encodeURIComponent(fileName); // Change data type and encoding
+            a.download = fileName; // This will set the download attribute with the file name including extension
+            a.textContent = fileName;
+            li.appendChild(a);
+            fileList.appendChild(li);
+        });
+    </script>
+</html>
+
+
+
+

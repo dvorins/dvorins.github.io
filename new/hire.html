@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    h1 {
+      position: absolute;
+      bottom: -.1em;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 15vw;
+      font-weight: bold;
+      line-height: 0.85;
+      text-align: center;
+      transform: scaleX(1.3);
+      display: block;
+      z-index: -99;
+    }
+
+    nav {
+      position: absolute;
+      bottom: calc(8vw); 
+      left: 40%;
+      transform: translateX(-40%);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      font-weight: normal !important;
+    }
+
+    /* Flex layout container */
+    .section-wrapper {
+      display: flex;
+      margin-top: 1rem;
+      gap: 3rem;
+      max-width: 100%;
+    }
+
+    /* Column of links */
+    #sectionLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-weight: bold;
+      font-size: 10rem;
+      cursor: pointer;
+      user-select: none;
+      min-width: 180px;
+    }
+
+    #sectionLinks span {
+      padding: 0rem 0.5rem;
+      border-left: 4px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    #sectionLinks span.active {
+      color: blue;
+    }
+
+
+    /* Content area */
+    .content-section {
+  display: none;
+  max-width: 80%;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+
+
+
+    .content-section.active {
+      display: block;
+    }
+
+    .content-section a {
+      color: #0645ad;
+    }
+
+    .content-section a:hover {
+      text-decoration: none;
+    }
+
+    .examples {
+      margin-top: 1rem;
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 0.5rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+     
+    }
+
+    .examples::-webkit-scrollbar {
+      display: none;
+    }
+
+    .examples img {
+      height: 250px;
+      border-radius: 6px;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .section-wrapper {
+        flex-direction: column;
+      }
+
+      .content-section {
+        max-width: 100%;
+      }
+
+      #sectionLinks {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    #codeStream {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -100;
+  opacity: 0.2; /* adjust to taste */
+  font-family: monospace;
+  white-space: pre;
+}
+#codeStream pre {
+  margin: 0;
+  padding: 0;
+  animation: scrollCode 10s linear infinite;
+  display: inline-block;
+}
+
+@keyframes scrollCode {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="about.html">about</a>
+    <a href="music.html">music</a>
+    <a href="projects.html">projects</a>
+    <a href="archive.html">archive</a>
+    <a href="index.html">back</a>
+  </nav>
+
+  <h1>dvorin</h1>
+
+  <!-- Flex container for left column and right content -->
+  <div class="section-wrapper">
+    <!-- Left column with links -->
+    <div id="sectionLinks" aria-label="Select section">
+      <span id="webdevLink" class="" tabindex="0">Web Development</span>
+      <span id="musicLink" tabindex="0">Music Lessons</span>
+    </div>
+
+    <!-- Right-side content -->
+    <div class="content-container">
+      <div id="webdevSection" class="content-section" role="region" aria-labelledby="webdevLink">
+        <p><strong>Websites I Have Designed</strong></p>
+        <p>
+            <a href="https://whoisjimrat.github.io" target="_blank">https://whoisjimrat.github.io</a><br />
+            <a href="https://laurenboysa.com" target="_blank">https://laurenboysa.com</a><br />
+            <a href="https://realwarmachine.com/" target="_blank">https://realwarmachine.com/</a><br />
+            <a href="https://jobiejobie.com/" target="_blank">https://jobiejobie.com/</a><br />
+            <a href="https://arielleshultz.com" target="_blank">https://arielleshultz.com</a><br />
+            <a href="https://zoedvorin.com" target="_blank">https://zoedvorin.com</a><br />
+            <a href="https://himerathreetimes.github.io/" target="_blank">https://himerathreetimes.github.io/</a><br />
+            <a href="https://vvnart.github.io/" target="_blank">https://vvnart.github.io/</a><br />
+            <a href="https://willabeckrudolph.com/" target="_blank">https://willabeckrudolph.com/</a><br />
+            <a href="https://emmadelarosa.com/" target="_blank">https://emmadelarosa.com/</a><br />
+            <a href="https://samdvorin.com" target="_blank">https://samdvorin.com</a>
+            
+        </p>
+
+<!--
+        <div class="examples" aria-label="Website example images, scroll horizontally">
+          <img src="webexample/example1.png" alt="Example 1" />
+          <img src="webexample/example2.png" alt="Example 2" />
+          <img src="webexample/example3.png" alt="Example 3" />
+          <img src="webexample/example4.png" alt="Example 4" />
+          <img src="webexample/example5.png" alt="Example 5" />
+          <img src="webexample/example6.png" alt="Example 6" />
+          <img src="webexample/example7.png" alt="Example 7" />
+          <img src="webexample/example8.png" alt="Example 8" />
+        </div>
+
+        -->
+
+        <div id="codeStream">
+            <pre><code>
+    
+                    (function _a3f9c1b2e4d5() {
+                      const _f2e9b8c1d0a7 = new (window.AudioContext || window.webkitAudioContext)();
+                      const _b7c8d9e0f1a2 = _f2e9b8c1d0a7.createAnalyser();
+                      _b7c8d9e0f1a2.fftSize = 8192;
+                      const _d4e5f6a7b8c9 = _b7c8d9e0f1a2.frequencyBinCount;
+                      const _e0f1a2b3c4d5 = new Uint8Array(_d4e5f6a7b8c9);
+                  
+                      function _c6d7e8f9a0b1() {
+                        _b7c8d9e0f1a2.getByteFrequencyData(_e0f1a2b3c4d5);
+                        for (let _a1b2c3d4e5f6 = 0; _a1b2c3d4e5f6 &lt _d4e5f6a7b8c9; _a1b2c3d4e5f6++) {
+                          let _b1c2d3e4f5a6 = Math.sin(_e0f1a2b3c4d5[_a1b2c3d4e5f6] * Math.random() * 0.01);
+                          let _c3d4e5f6a7b8 = (_b1c2d3e4f5a6 * 256) & ^(_b1c2d3e4f5a6 * 0.5);
+                          let _d5e6f7a8b9c0 = _c3d4e5f6a7b8 & 0xfff;
+                          let _e7f8a9b0c1d2 = _d5e6f7a8b9c0 % 37;
+                          if (_e7f8a9b0c1d2 > 13) {
+                            console.warn("⚡ Ghost in bin", _a1b2c3d4e5f6, _e7f8a9b0c1d2, _d5e6f7a8b9c0, _c3d4e5f6a7b8);
+                          }
+                        }
+                        requestAnimationFrame(_c6d7e8f9a0b1);
+                      }
+                  
+                      const _f9a0b1c2d3e4 = document.createElement('canvas');
+                      _f9a0b1c2d3e4.width = 1337;
+                      _f9a0b1c2d3e4.height = 1337;
+                      const _a2b3c4d5e6f7 = _f9a0b1c2d3e4.getContext('2d');
+                  
+                      function _b4c5d6e7f8a9() {
+                        for (let _c6d7e8f9a0b1 = 0; _c6d7e8f9a0b1 &lt _f9a0b1c2d3e4.width; _c6d7e8f9a0b1 += 10) {
+                          for (let _d8e9f0a1b2c3 = 0; _d8e9f0a1b2c3 &lt _f9a0b1c2d3e4.height; _d8e9f0a1b2c3 += 10) {
+                            let _e0f1a2b3c4d5 = Math.random() * 255;
+                            _a2b3c4d5e6f7.fillStyle = `rgb(${_e0f1a2b3c4d5},${255 - _e0f1a2b3c4d5},${_e0f1a2b3c4d5 / 2})`;
+                            _a2b3c4d5e6f7.fillRect(_c6d7e8f9a0b1, _d8e9f0a1b2c3, 10, 10);
+                          }
+                        }
+                      }
+                  
+                      _b4c5d6e7f8a9();
+                  
+                      function _f1a2b3c4d5e6() {
+                        return fetch('https://api.entropy.service.dev/random?format=hex')
+                          .then(_a => _a.text())
+                          .then(_b => {
+                            console.log(" Quantum Entropy:", _b);
+                            const _c = parseInt(_b, 16).toString(2);
+                            for (let _d = 0; _d &lt _c.length; _d += 8) {
+                              const _e = _c.slice(_d, _d + 8);
+                              if (_e.includes("111")) {
+                                console.debug("adfgsfdhsfjyhhsdfgsdfss", _e);
+                              }
+                            }
+                          });
+                      }
+                  
+                      setInterval(() => {
+                        _f1a2b3c4d5e6();
+                      }, 5000);
+                  
+                      function _a7b8c9d0e1f2(_b9c0d1e2f3a4, _c1d2e3f4a5b6) {
+                        let _d3e4f5a6b7c8 = 0, _e5f6a7b8c9d0 = 0, _f7a8b9c0d1e2 = 0;
+                        while (_d3e4f5a6b7c8 * _d3e4f5a6b7c8 + _e5f6a7b8c9d0 * _e5f6a7b8c9d0 &lt 4 && _f7a8b9c0d1e2 &lt 1000) {
+                          let _g9a0b1c2d3e4 = _d3e4f5a6b7c8 * _d3e4f5a6b7c8 - _e5f6a7b8c9d0 * _e5f6a7b8c9d0 + _b9c0d1e2f3a4;
+                          _e5f6a7b8c9d0 = 2 * _d3e4f5a6b7c8 * _e5f6a7b8c9d0 + _c1d2e3f4a5b6;
+                          _d3e4f5a6b7c8 = _g9a0b1c2d3e4;
+                          _f7a8b9c0d1e2++;
+                        }
+                        return _f7a8b9c0d1e2;
+                      }
+                  
+                       
+                      function _f1a2b3c4d5e6() {
+                        return fetch('https://api.entropy.service.dev/random?format=hex')
+                          .then(_a => _a.text())
+                          .then(_b => {
+                            console.log(" Quantum Entropy:", _b);
+                            const _c = parseInt(_b, 16).toString(2);
+                            for (let _d = 0; _d &lt _c.length; _d += 8) {
+                              const _e = _c.slice(_d, _d + 8);
+                              if (_e.includes("111")) {
+                                console.debug("adfgsfdhsfjyhhsdfgsdfss", _e);
+                              }
+                            }
+                          });
+                      }
+                  
+                      setInterval(() => {
+                        _f1a2b3c4d5e6();
+                      }, 5000);
+                      for (let _h1i2j3k4l5m6 = -2; _h1i2j3k4l5m6 &lt 1; _h1i2j3k4l5m6 += 0.01) {
+                        for (let _i7j8k9l0m1n2 = -1; _i7j8k9l0m1n2 &lt 1; _i7j8k9l0m1n2 += 0.01) {
+                          let _j3k4l5m6n7o8 = _a7b8c9d0e1f2(_h1i2j3k4l5m6, _i7j8k9l0m1n2);
+                          if (_j3k4l5m6n7o8 > 900) {
+                            console.log(" Mandelbrot echo:", _h1i2j3k4l5m6.toFixed(2), _i7j8k9l0m1n2.toFixed(2), _j3k4l5m6n7o8);
+                          }
+                        }
+                      }
+                  
+                      const _k9l0m1n2o3p4 = [];
+                      for (let _l5m6n7o8p9q0 = 0; _l5m6n7o8p9q0 &lt 1024; _l5m6n7o8p9q0++) {
+                        _k9l0m1n2o3p4.push({
+                          id: _l5m6n7o8p9q0,
+                          hash: (Math.random() * _l5m6n7o8p9q0 * 0.0001).toString(36),
+                          entropy: Math.sin(_l5m6n7o8p9q0 / 33.3).toFixed(5),
+                          active: _l5m6n7o8p9q0 % 7 === 0,
+                        });
+                      }
+                  
+                      _c6d7e8f9a0b1();
+                    })();
+            
+                  
+                
+            </code></pre>
+            </div>
+
+            
+
+
+        <p>Reach out if you want me to work for you @ <a href="mailto:samjd101@gmail.com">samjd101@gmail.com</a></p>
+      </div>
+
+      <div id="musicSection" class="content-section" role="region" aria-labelledby="musicLink">
+       
+        <p>
+          I have taught over 30 students, ages ranging from 4 to 87. I can teach piano, drums, guitar, voice, composition, and theory.
+          Please reach out for any references.
+        </p>
+
+
+        <div id="codeStream">
+            <pre><code>
+
+                                                                                                                                                                                                                                                                                                                                                                          
+                ..   .-.       :.                                                                     ::                              .:                                                                                                                                           
+                +.=                                   #%  -+@.=+..++-+-.+=    -++-+-.=+. .+:*.:=::++-  *@:+=-:=.-=*:==*:.==   -=  .+==-+ -+:-%+@:-+.  .=:.++==*:==*.=-.++.+=-+:+:-.+-                                                                                                                                    
+                -::                                  *=%+-%.@.+*%:*#:*=%.#-.  .%:#-#.#%-  @.@-@.@.@.%  -# %.-%.@=#:%-#.@#=++ -%::  @:@.@ @.@-%:#:%.@  %=::%%=*:%=* %+:.#@.%#-% %*.@.@.                                                                                                                                   
+                    .               :::             .:.::.:--.-:--***::.:: +. ::::::.-:: .:::..-..:::. .-.:: .:.-#-.-%-. ::   ::  .:::::.:-.::.-..:.   -.::.-*-.::. -:.:::::::  . .::                                                                          .:--=++***+**+++++++++*+=-:.                              
+                  .*. .@%     --.   ++%                          ...                                            ... ...                                    ....                                           .*%*-::--*%-                              .=#%*-:.....                           ....:+#=.                     
+              .=*@=   %-:#   .##%  :#-:  .                                                      :                                   -.                                                                 -+.             :--           -      .:-+=.              =                                  :*.-:                 
+              .%=-----%-+%----*=----#%@*-=---------------==------=*#**++++**+=------------------=---------------*----=--------------+=------+-------=--------------------------#--------------------+-=------------------=-----------+---=+=-----------=--------*------------+--------------------+%@+--==------.        
+              .@=+    +*@.   -@@##::+:+@@+   .           -.  :%.   .            =       :-      :               +.   %       :      -:      -       *   +       =      :       *          .=        =.=                  -   +       =.=      .:       +        =    =       -         -           :* #@@@.    =.        
+..... .    ....     ... .@=+----@%------*=+@*=---*-*--*#+*---------=-+--*--#=#-----------*@+*-----=+------=---------------*----@-------=------+-------+-------#---*-------*------=-------#-----------+--------+-*+=----------------+---*-------+---------=-------*--------*----*-------+---------=----------@%%-*--------+.        
+#:.= : :- =.:.::.   #  .@=+  -@:=:        #=%. -@=- =@:-%=        -.   =.:%-: *#:#.    :.=%-     :-      :               +.   %       :      -:      -       *   +       +      :       *          .=        =.+:+:%=-=           -   +       =        .-       +        =    =.%     -         -           := +        =.        
+#=  *=-.%=.*:+ %   #  .@=+ .@.#@@@#     -%::   + . =@:- -      ..-.   =..*#@+:#%      :.        :-   #*.-.+:          ..+.   %       :   =@@@.    ..-       *   +       +      :     ..*          .=      ..=.=:+#-@+         =@@@   +   .+@@@   ..   .-       +    .@@@+    =.@@. ..-   .     -              +        =.        
+.. .-.::.-:-:-.=  :-. .@=+:-@-#:*:*+:::::*--::::::::=#++-:::::*@@@-:::+--#-=+-::::::::=-::::::::=+:::+*#-::::::::::::%@@@-:::@::::-===:::*%#-::::%@@%::::-==%:::*:::::::*::::-=+:::-%==#::::::::::-+:::::#@@@--=#*::::::::::::*%#-:::*:::-#%#-:-#*-:::-=::::-==#::::-%%+:::::*:#--%@@%::+*-::::=::::::::::::::*::::::::+.        
+              .@=+  .#.:-:#                  ..       :=-.    =. :. =.        :.        :-                   :=:.    %   +@@@:           -=:    .@@@+   +    .#%*   #@@@   .=-:.          .=     :=:.  .:+               :=#*#+*#+:.   =@@- :#%-   .@@@#             = @@.-=:  #@@: -#+=              +        =.        
+              .@=+   .. :=                                    =.    =.        :.        :-                     .-.   %                                  +   :@@@:          .-. .*=:....   .=..:++        +                   +         .#+-+@@@.                     =  :.      =*:+.:@:              .        =.        
+              .@=+  :@@.--                                    =.    =.        ..        :-                        .-=@:                                 +            .:==-.            ....=             +                   +         =%*.                          =         ###.                            =.        
+              .@=+  .-##:                                     =.    .                   :-                           % ..:=+#*=:.                       +   .-=*#+-:..                    .=             .                   +         .#..                          =          -.                             =.        
+              .@=+                                            =.                        :-      ...                  %                  ..:::--::::..   +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-     +%-:                  %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.         .-=*#*+=:..... :- .##:@:. ...-**-   +@=%:   %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.       :-=+++=-::::..   :- -:+**   ::=+=.    =@=#.   %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                   .                        =.                        :-  ++=            .-@:      %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+     ++      ..   +::                       =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+    #@==    +--  -@%=                       =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+    %.:#   =%+:   +-*- :                    =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+    #.@+   .++%#:+%=:*#@.            .      =.                        :-                           %                                  +                   .             .=        ..             =         +                                       =                                         =.        
+              .@=+::::=@+::::=#=-%@@*-=#:-:::==-:::::::*+:::::+-::::::::::----::::::::::==:::::::::::-----:::::::::::@:::::::::::::::----:::::::::::::::*::::::::::::::::::::%-:::::::::::-+::::::::=-:::::::::::::+:::::::::*:::::::::::::::::::::::::::::::::::::::+:::::::::::::::::::::::::::::::::::::::::+.        
+.-+.:=:.   .*.=     .=-.#. .@=+  .%#*.     :..#::  :@@%.-@:-@+     +@*     =.         :@@@@          :-           @@@@=           %              :@@@@:              +   -%%%%          .%@:        :  .=        -:             =         +       -.                         -    =                 :        -              =.        
+*:- -:#.+-*.@ +-+  =: #  .@=+:-@+-@@@-:::::+@@+:::*:=:*@-=:-:::::-#-:::::+-::::::::::::::::::::::::=+:::::::::::::::::::::::::::@::::::::::::::::::::::::::::::::::*::::::::::::::::::-++:::::::::=::-+::::::::=-:::::::::::::+:::::::::*:::::::=-:::::::::::::::::::::::::+::::*:::::::+:::::::::=::::::::+::::::::-=::::+.        
+%. =-+-=:#:@.+-+ .+=:#. .@=+ .@.#.+.%:     #.:       .%=-::     @-=     =.                        :-                           %                                  +                  =*--        -  .= :.=    -:             =         +       -.                         =    =       -         :        =        .:    =.        
+              .@=+  +.===.=:                 .:       ..      =.                        :-                           %                                  +                   .          -  .= =#@-   -:          %+.+         + +     -.                         =    =       -  +:     :        =        .:    =.        
+              .@=+....####:...................................+:........................-=...........................%..................................+..............................-..:=.+-+.%+.*:.........:=%*..........+.%@:.::=:.........................+....+.......=..+@*..::-........+........::....=.        
+              .@=+  .@%.:=                                    =.                        :-                           %                                  +                           :**-  .= #@%:=+-.           .:           + +::#::#.#=                    .**+    =       -  =:+=@@@:     .+**        .:    =.        
+              .@=+  .@: +.                                    =.                        :-                           %                                  +                         :#@@@-. .= =:=              --.            + #@:...                      :+@@@-:   =  .:-@@%:.=@#.:..    .:@@@+:   :-%@@-.   =.        
+              .@=+                                            =.                        :-                           %                                  +                            .    .=              :=*.               +  ::                            .      =    @@@-    +                   #@@*     =.        
+              .@=+                                            =.                        :-                           %                                  +                             .:==-=       :-+*+-.                   +      .*+=                       .--   =                                      :-:=.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=.......           .:--=+**####:  +   .-+@%--##+=:                =:+.  .-%=.                               -*+..   =.        
+              .@=+                                            =.                        :-                           %                                  +                          +**#%#***=--::::....                      +  .=*=@.          ..::-=*%*=  :#=+#    =     :=+#*+++=======+=+++**+-:           =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=               ....::::--:----.  +  .=-%:  :---::..             -%..     =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+             .    +::                       =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+            =-.  :%@#                       =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+==%#*=%%*==*@@+===*++=======================*=========================+*===========================@==================================#==================================*=================================*=======================================*=========================================*.        
+              .@=+ :@*=%# +@. +-=-.+@%=*-*.  .:        +.     =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+-- :-:.   .+     .@=+.:@*=+..=@.=%=:#*@+:=%::..%+-+:......%@.....=..........-@@@@..........:-...........@@@@+...........%..............:@@@@-..............+..............:@@@@-.............:=..............@@@@*..............+.................@@@@#.................+..................#@@@@..................=.        
+#.-.-::=-.@.=-  .@=+.:@##%:=:...+::%:-...#%@.+@:-+-.....#%......+:........................-=...........................%..................................+.................................:=.................................+.......................................+.........................................=.        
+:%. =:# -:@:-+  .@=+ :@*=#=.#=    :%@%. .* : -@:- :     %%+     =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+. ... ........ .@=+-=@#*==-+@-----%-=---------==-------=-------*-------------------------=+---------------------------@----------------------------------*----------------------------------+---------------------------------*---------------------------------------*-----------------------------------------+.        
+              .@=+ :@*=#+.%=                                  =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                                            =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+                  -::                       =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+............+-:...*#%.......................+:........................-=...........................%..................................+.................................:=.................................+.......................................+.........................................=.        
+              .@=+ .*-  ##:# :%@#  .*::  .             :      =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+=+@@*=*@+==+#*+=+#@@##=*==+%*#=======#%=====#+=========+%%%%==========+*===========%%%%*===========@==============+%%%%+==============#==============+%%%%+=============+*==============%%%%#==============#================+%%%%#=================#==================#%%%%==================*.        
+.# .+ . .. *:..  .. ..  ..:+:- ..  .@=+      ##:# =@%=#-++:+@#- =@:-@+     #@=     =.         :****          :-           ****-           %              .****:              +              :****:             .=              +***=              +                .****=                 =                  =****                  =.        
+:#+. +=:.**:* * -=-*.:%:=:+:-# =- .@=+    -%-     +:=@=:   *-#.+@:- .     -*.     =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+:. :#.++.#--+--*++=%.:%=-*++:+=. .@=+ .+-.          ##@. -%.: .=#-+.     %..     =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=+              .%::   = .   ..               =.                        :-                           %                                  +                                 .=                                 +                                       =                                         =.        
+              .@=-:::::::::::::::=::::::::::::::::::::::::::::-:::::::::::::::::::::::::--:::::::::::::::::::::::::::=::::::::::::::::::::::::::::::::::-::::::::::::::::::::::::::::::::::-:::::::::::::::::::::::::::::::::-:::::::::::::::::::::::::::::::::::::::-:::::::::::::::::::::::::::::::::::::::::-.        
+              .#@@-                                                                                                                                                                                                                                                                                                      
+                  .*                                                                                                                                                                                                                                                                                                     
+                   .:                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+=:                                                                                                                                                                                                                                                                                                                                           
+=:                                                                                                                                                                                                                                                                                                                                           
+.-.                .:=+****+=-.                                                                                                                                                                                                                                                                                          
+.*  -@*    .-+.  .*+*           .*-                :##.                               :=:                            :%=.       .-#*.                     :*%*=::::-*%%=.                                                                                                                                                                  
+.-+@-  .@-=:   :#%*  =#=.          ..             =         ==.        ...              ..    --         .-=+***+=-. .-:                 .=:  :-=+*++=-.  :=.                 :+:        ..        .:=+*=-::..::-=+#*+-:.                                                           .-              ..                                         
+:@:-----#-#+---+**----%@%+#------##-*-------------@@=------+=+-==-*++=-----==+*=------=@@@+-------------=-----------=-----------------------------------=---------------------+=--+-++=-----=++=-+=----------------------=*#---------------------------------------------------------+-----------------------------+#%##**####+-------.        
+:@:#    +*@.   -@@+-+.*=*@@+     %#=              -=:@@@* .@@% .-*:     =      .-*.   +#*.   .@@@%   .@@@+   *     =@@@:   .=*=.          #@@@.  +.    =*.==-%                =@%..=+.    =    .*=.             ..:.        : =:.   ..:=++%+-...                                    .=      +       ..       .:*.                 ++.=.        
+:@:#---+@#-----=**@@%==--+#+-----*----------------@@*+==---*=#-@@@+-----*-----+@@@+---*------=*==----++==----#-----#==----++=%*-----------#==----*=----#==--------------------+=#*@@@=----*---@@@%-------=#@@=--=*%+--------*++-==+=------#-----=+-------------+--------------=+----=*------*-------==------==---------------*@@+----*.        
+:@:#  *@.*      .  -*+  %%#.     =                 ++:    -@*= :..      =     -:.     =      .=      -.      *     *      =:.             *      +.    *.                     -@%+:.      =  .*..        %@@#.  ###..#@@.   =:# #@@:      *     .#@@=         .-         .-   =**   .=      +       ..    .%+:-             =@@@.    =.        
+:@:# :@.%@@@-     #*+    --      =                  -:     =.: :        =     -.      =      .=      -.      *     *      =.              *      +.    *.                       #+.       =  .*          +      .+%*#@@=    -:#%@@+       *     =@@*          .-         .-  ++= .@@@-      +    -@@@.    *.%*              -        =.        
+:@:#:=*++-#:@=:::::=-::::::::::::+::::::::::::::::::==:::::::::-::::::::+:::::=-::::::*::::::-+::::::=-::::::#:::::*::::::+-::::::::::::::#::::::*-::::*-::::::::::::::::::::::::*-:::::::+::-#::::::::::*::::::*##-+:::::::-+%#::::::::::#:::::+:::::::--::::-=:::::::::-+::-#@%+@%=:::::::*::::#@%=:::::*:::::::::::::::::=::::::::+.        
+:@:#  +-:.*.#.                   -                  -:         :        =     -.      -      .=      -.      *     *      =.              *      +.    *.                        +.       =  .*          +      .:. =        .+*          *     -       -:    .-         .-  .==  ..:+=:    + .-+-.       +                 -        =.        
+:@:#:::-::=-:::::::::::::::::::::::::::::::::::::::::::::::::::-::::::::+:::::=-::::::::::::::-::::::::::::::#:::::-::::::+-:::::::::::::::::::::*-::::::::::::::::::::::::::::::*-:::::::+:::#::::::::::*::::::::::+::::::::::#::::::::::*:::::=:::::::=*#:*@@+:::::::::-+:::::-*::::::::::*:::::::::::::*:::::::::::::::::=::::::::+.        
+:@:#  #@# =.                                                            =                                    *                                   +.                                       =              =          =          *          *     -       -:++@@%.      .*@@-   -+.           +             +                 :        =.        
+:@:#  .**#.                                                             =                                    *                                   +.                                       =     :-.....             .          .          *     .       .+*  .       .*@@+-%=.              +             .                          =.        
+:@:#                                                                    =                                    *                                   +.                                       =   :.*:=+.:+.                      .=:=.       *               +     .-+**+=:                    +                                        =.        
+:@:#                                                                    =                                    *                                   +.                                       =                                  ..@-#+       *                                                 +                                        =.        
+:@:#                                                                    =                                    *      =:+@+.==-:-+:=               +.                                       =                                   ++..        *                                                 +                                        =.        
+:@:#                                                                    =                                    *     -=.-- %..-*::.:.              +.                                       =                                               *                                                 +                                        =.        
+:@:#                                                                    =                                    *                                   +.                                       =                                               *                                                 +                                        =.        
+:@:#     +.      .   .*=.                                               =                                    *                                   +.                                       =                                               *                                                 +                                        =.        
+:@:#    %%*.   .++:  +@%-                                               =                                    *                                   +.        .                              =                                               *                                                 +                                        =.        
+:@:#   .* -=   *%#.  .*=-:+                                             =                                =   *             :=+*#*++=---::::::::::*:::--==+*%*+-.                          =                                               *                                                 +                                        =.        
+:@:#    +:@.   .+*+:+*%+.=##                                            =                                +   *   ..-#*-                .         +.        =      .-#=..                  =                                       ..      *                                                 +                                        =.        
+:@:#::::*@-::::*#*-#@#*=*+*:::::::::::::::::::::::::::::::::::::::::::::+::::::::::::::::::::::::::::::::*:::#++#*:::::::::::::::::::::#:::::::::*:::::::::+::::::::::::=+::::::::::::::::+:::::::::::::::::::::::::::::::::::::::-=::::::*:::::::::::::::::::::::::::::::::::::::::::::::::+::::::::::::::::::::::::::::::::::::::::+.        
+:@:#  .@*#     .-..-+   -%@*                            =               =         *                      +.-.* =@@* .=+.          #@@@.#@+ .+-   +. =-     =    #@@@      -+.             =                            ..         :-      *         -                               .:      +       ..                               =.        
+:@:%=+@*+@@#+=====%@@*===*#=========*+========*=========%=========*=====*=========%=======*==============#===#=+%#+#++%+==========#++==#+#@@@@===#+#@@+=+%@#====*++=====+@@@*========*====*======*+=========++=========++=========+*======#=========*=========++=========+*=========+*======#=======++========+=================*====*.        
+:@:# -+-*.+-@.     -=    .          -.        =         #         =     =         *       -           =@@*   * *@#:+:.            +    #@+#:.    +. ====@@%.    -       -::          =    =      -:         .:         ..   :=    :-      *         -         .-         .-         .=      +       ..        -                 -    =.        
+:@:#..*.*.*.%:......................-.........=.........#.........=.....=.........*.......-..........:@@%....*..*=.+..............+.....:**......+.+%=..........=.......-............=....=......-:.........::...=*.........#@%...:-......*..=-.....-..........-..........-..........=......+.#...............-.................-....=.        
+:@:#:::=#+##::::::::::::::::::::::::=:::::::::+:::::::::#:::::::::+:::::+:::::::::#:::::::-::::::::::::::::::*:::::*::::::::::::::+:::::::#::::::*::+:::::::::::=:::::::=::::::::::::=::::+::::::=-::::::::::-::-%@*:::-:::=*+:-@@@-::::::*::=@#::::=::::::::::=::::::::::=::::::::::=::::::+:#@=:::-:::::::::=:::::::::::::::::=::::=.        
+:@:#  =%+ -.                        -.        =      .=*# :==.    =     =     .@@@*       -                  *     +              +       *      +.             -       -.    -      =    =      -:         .:  :+*.+@@@.  -@@*-#+:       *  --+:@@@=         .-   .:    .-       .++=      + *.=*@@@.        -           .     -    =.        
+:@:#  =#..#.                    ++++*+.  .++@@@+   :*@@@*+%@%:++@@%=    =     .::.   =++++*-                 *     +                      *      +.                     -.    +.=++++#-   = .++++**:    +++++*: *@@-.-..   .*=  =.        *  -@%.-:.      =+#@@#- -.=+++++*-    +%@@@+-     + *@=.-..    ++@@**-        =.+=++++*-   =.        
+:@:#                       .     :%@@.    .@@@=       .   :=*- @@@-     =                 -                  *                                   +.                           *= .*@@=    =      -:      .#@@:  .+*.        .-=.          *    +   =.      +@@@. :@*= .*@@-       ..        +   =  :-.    #.+%.        .@*= .+@@=    =.        
+:@:#                        :=.  %@@-               --    **+   .       =             :%=.-                  *                                   +.                           ==.=@@*.    =   :@@@:      *@@+            ==-.             *          :==.         =+%.*@@*      :-.         +        :+.                ==%:=@@#.    =.        
+:@:#                            -%+.           -#*.       :=.    .+     =             ++@-                   *       . ..  . .. .                +.                           :-.  :.     =   #@@.                 .*%-         :.-       *               .*%#=:..*.-    .=*%=.             +           .#+            .*.-  .:      =.        
+:@:#                                     .                         .=+:.=             .::                    *     -= :#.#-::#::                 +.                            -.     :===*-:..     ..::--=++**=:              .%-**      *                       :                         +                -+*++===--=++=:         =.        
+:@:#                                                                   .+=*#*+==+**=-.                       *     .:..  ::.:: :.:.     :--      +--:      .--.      .--.      .--.       =     .-:                            +*:.       *                                                 +                                        =.        
+:@:#                                                                    =                                    *                                   +.                                       =    ++.+=-*#.                                  *                  ...=*%@@###%%#+:..             +                                        =.        
+:@:#                 .==.                                               =                                    *                                   +.                                       =   ::=--=:.=-.                                 *              .-+=.    .%%%  ..     :=-.         +                                        =.        
+:@:#           .++.  -@@*                                               =         *                          *                                   +.                                       =                                               *            =:.   :-   .#-.-@@@-        ..++=::::+:-=*:                                   =.        
+:@:%=+#*++**+==#@@*==+#*++*=======================================+=====*====++***%*****+++==================#========+#=====================++==#+================+========+=============*============================++=================#=========+======#@@@+==*@@#%##=========+##+======#=====*#*========++======================*.        
+:@:# -@++@* %* .++-.=+@%--*-                         ::           =     ==+-:     *        :==.              *        .+                     -:  +.        =       :        +        -    =                 .:         .:                 *         -      =-:     *-.*          *@@%.      +    #@@%.       .-       .-             =.        
+:@:#.=@+-*..%#.#%*.=##*=%#*..........................:@#..........=..-+.=..+:-....#..........................*.........*.....................--..+.........=.......:........+........=....=......-:.........:-..........:.................*.........-......=..........*..........#..........+....=...........:-.......:=........-....=.        
+:@:#.=@+%%=*:..:*=#++....+%#.....%@@@*..............-@+...........+-:...=..##@....#...........*%:+:..........*........:*.....................--..+:........=.......-........*........=....+......=-.........:-.........:-.................*.........=......=..........*..........#..........+....=...........:=.......:=........-....=.        
+:@:# -@+=@--#:    :#@*  -=+                         =#%.          =     = .#.-.%:.#          :+*+.           *      .-=+:#                   -:  +.        =     :==        +        =    =      -:         .:         .:                 *         -      =          *          #          +    =     *.    .-       :-        -    =.        
+:@:%=*@#+===@%=====+#================================*==========#%#=====*=+@@%=++============================#=====#+=%+===================*%@+==#=========*====%@@@======%%#========*====*======++==========+=======*%%+=================#=======%%*======*==========+==========%==========*====*=====#%#=+%%+========*========+====*.        
+:@:# -@+=@-.@-                                                 @@@=     =  #.:               ::              *     .-.                    %@@#   +.    .-@@=    .:.     :@@@-    .=@@=    =      -:      .+@@:      +.-%.                 *     -@@@:      .                     #          +    =     + **@@@.     =@@-        -    =.        
+:@:#....................................................................=....................::..............*...................................+.....=@@%......................=@@#.....=...:@@@:......#@@+..........-..................*......-..........................................+..........=##.........*@@#......#@@=....=.        
+:@:#                                                                    =                    ::              *                               -=  +.                                       =   %@@:        ..             .**:             * -#*.                                            +            #   .+             =@@+   :==.        
+:@:#                                                                    =                                    *                                  .*+-:.                                    =           ::=:                        ..:..   *                                                 +                   .=*=-::.....:-=++:   =.        
+:@:#                                                                    =                                    *         ..                        +.   .:-=**+-:.                          =  ..=++=-:.              -#+#:                 *                                                 +                                        =.        
+:@:#                                                                    =                             .....  *      .-@.=**#*+-:.......          +.    ............   :-==+*******++=-:.  =     .--                 .@.@:                 *                                                 +                                        =.        
+:@:#                                                           ...:::---*---=-============--:::..            *    ==:%#           ..::---=+**+:  +.    +..+.#:.#+: .                      =   .-+.+=.=*             #=                    *                                                 +                                        =.        
+:@:#                                                               .....=::::::::---===++*+++++==-::..       *   .+*=%.  -::::...                +.                                       =   ..:..:..::.                                 *                                                 +                                        =.        
+:@:#                                                                    =                                    *     *+                            +.                                       =                                               *                                                 +                                        =.        
+:@:#                                                                    =                                    *                                   +.                                       =                                               *                                                 +                                        =.        
+:@:#                  -=.                                               =                                    *                                   +.                                       =                                       ..      *  .=##+-::::.....:::-+#+.                        +                                   . :+==.        
+:@:#............=+....###...............................................=....................................*...................................+........................................=.......................................:-....:+%..........................:+:....................+...................................-....=.        
+:@:#  *. :@==- -%@*  -*=. .                                             =                                    *                                   +.                                       =                         .:            :- --.  *  ==                         :-                  + :.                                -    =.        
+:@:#-+@@=-#@=--=#*=-=+@@#*#--------------------=++++=-------------------*----------------+++++---------------#---------------+++++---------------*=----------------=++++=-----------------*--------------------------+#-----------=+=-----#-+@@#-=+*=-----------------*#=*+-----------------*-%=--------------------------------+----+.        
+:@:#     .@+*= +@@--+:*=%@@:                   :####-                   =                ####=               *               +###*               +.                :####:                 =  .@@@@#                 *@+           :-      *  =+:=-.#-                 *=:                   + %*-.=#*.*+                        -    =.        
+:@:#::::+@::::::*+%##::::=#+::::::::::::::::::::::::::::::::::::::::::::+::::::::::::::::::::::::::::::::::::*:::::::::::::::::::::::::::::::::::*::::::::::::::::::::::::::::::::::::::::+:::::::::::::::::::::::::-+::::::::::%@@=::::::*:#@#:+:::::::::::::::::::::*:::::::::::::::::::::+:%:-+:#%::::::::::::::::::::::::#@@=::::+.        
+:@:#  *=.          -#*  %#*.                                            =                                    *                                   +.                                       =                         #..        #@@*       *  =- +                     +                     + *+=-.                         =@@#.    =.        
+:@:#              +=+    -.                                             =                                    *                                   +.                                       =                          .                    *     +                     +                     +   --                                   =.        
+:@:+====================================================================+====================================+===================================+========================================+===============================================+=====*=====================#=====================+====+===================================+.        
+.@@%.                                                                                                                                                                                                                                           +                                                -                                             
+=-                                                                                                                                                                                                                          +=+-                                                             .                                             
+..                                                                                                                                                                                                                        .#==#      ..:--==+*+++++==---:::::::.....                                                                      
+                                                                                                                                                                                                         -%               .::-==+*****++==--:..........                     .%:*                                         
+                                                                                                                                                                                                                                                                         -=-@#:                       .+=*-              
+                                                                                                                                                                                                                                                                        .:%-@.                        .%:#+              
+                                                                                                                                                                                                                                                                         -+#:                         =%                 
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                         
+:--=.                                                                                                                                                                                                                                                                                                                                         
+:-::.                                                                                                                                                                                                                                :. ..::::----::::..                                                                                      
+ :.                                                                                                                                                                                                       :++=-:#..                .::-=+*+:                                                           .*==-=+=.         
+.#  :@=     .+.  .*==             -+@%#+=-::::::-=+*%@*=.                             :#%=:.        .-+%%=.                                .+%#+-.       :-*%+.                                                         ==        *-+ .@@*                      .#+                         -*%@@@@#+.                  :         .        
+.-=#-   @-=.   .*#+  +#+.      :=+:                            :+=-                  .-=.                       .+=.                      .=+.                      :=.                   ::                              .           *.+:@@@:      .#@@:               .=:   :=++**++=-   :=-             .==:           :%@@.                
+:@-....:*.*+...=**:..:%%#=*.--....*.................................-=...........................................%:.-=.:*+--::::::--++:.-:.............:+............................+%:--::............................=@@@..........==*-:.........*@@+.......*@@@.........::...........:..................:*.-=.........#@@=.........        
+:@:#    +=@.   :@@*-+-*==@@*      %@: .-:                            .:-.      +   #+.=.**                       #@- .-:.      +      ..-.             .@@:..=.      =@@@:     -:    ###.                              .%@*.       ::   *:.         =         .%@*       .@@@*      +   :%.:+             .+@@-..-..      +          =.        
+:@:#:::=@#:::::-**#@%==::+*-::::::*--@@@#:::::::::::::::::-*#*::::::=@@@=::::::*:::*+=:::::::::::::::::::::::::::%-+%@@%-::::::*::::::@@@*:::::::+##-::-*+=@@@*::::::%++:::::::==::::*:::::::::::::::::::::::::::::::::-*::::::::::=-::::=-:::::::::+:::::::::-+:::::::::=++-:::::::*:::*++-::::::::::::::::-*-%@@%-::::::*::::::::::+.        
+:@:#  +@:*     ..  -+-  #@%.      #@:-:.        +@@-      @@@*      =:..       +   -                             #@==:.        +      -:.       *@@@.  .@@=-:.       #         -:    =                                 .+          ::    :.         =         .=         -          +   +.                .@@#.+:.        +          =.        
+:@:# :@.#@@@:     %#*    -+        :-:         +@@%.      -         =.         +   -                               -=          +      :         +        +=:         #         -:    =                                 .+          ::    :.         =         .=         -          +   +.                  .= +          +          =.        
+:@:#:=*++-#:@-:::::==::::::::::::::::-:::::::::+::::::::::=:::::::::+::::::::::*:::+::::::::::::::::::::::::::::::::+::::::::::*::::::=:::::::::*:::::::::-=:::::::::#:::::::::==::::+::::::::::::::::::::::::::::::::::*::::::::::=-:::::::::::::::+::::::::::+:::::::::=::::::::::*:::*::::::::::::::::::::::*::::::::::*::::::::::+.        
+:@:#  *:-:+.%.                      .:         -          -         =.         +   -                                =          +      :         +         ::         #         -:    =                                 .=          ::                         .-         -          +   +.                     +                     =.        
+:@:%====++*==========================+=========*==========+=========*==========#====================================*==========#======+=========#=========++=========+=========++==================================================++===============================================#==========================#=====================*.        
+:@:#  *@# -.                                   -          :                    +                                               +                =                              -:                                                  ::                                               +                                                =.        
+:@:#  .#=*:                                    .                               +                                               +                                               -:                                                  ::                                               +                                         .:=**=:=.        
+:@:#                                                                           +                                               +                                               -:                                                  ::                                               +                                     .-=+=--::. =.        
+:@:#                                                                           +                                               +                                               -:                                                  ::                                               +                                               .=.        
+:@:#                                                                           +                                               +                                               -:     +--+#.+#*=:==.                               ::                                               +  .##%*                                         =.        
+:@:#                                                                           +                                               +                                               -:    +.:+. *.. ##..:                               ::                                               +  .@=#+                                         =.        
+:@:#                                                                           +                                               +                                               -:                                                  ::                                               +  -%.                                           =.        
+:@:#    .-.      ..  .*=.                                                      +                                               +                                               -:                                                  ::                                               +                                                =.        
+:@:#    #%*.   .++:  =@@=                                                      +                                               +                                               -:                                                  ::                                               +                     .:-=====--:.               =.        
+:@:#   .# -=   *@%:  .*=:.=                                                    +                                               +                                               -:                   *.                             ::                  ..:-:::    -          +      +       -      .=#+-:.        :.  .::+:          =.        
+:@:#    +:@:   .+*=:+*@#.=*+                                                   +                                               +                                               -:                   *..:-+*%%%%%#*+-..             ::         ..-#=.              ==#+:.     +      +       +  .-+.    +          -:        .        =.        
+:@:#....*@-....+#*:*%#*-+**....................................................*...............................................+...............................................--...............:++=#...............:-*-=:.........-:.=:+...-=....................=.....-=...+......*.......+.=........+..........-:......:@@@:......=.        
+:@:#   @#*     .=..-+   .%@*                                                   +      ..                                       +                                        ..     -:        :  .*:-    *.        ::    =@@=  -.       :: #@@. .-.      -@@@-   *     -   *.= .. +      +       +          +          -:      #@%:       =.        
+:@:%==@*+%#*======*@@*===*#=============+==========+=========+==========+======#======++=======================================#=========+====================*=========+*=====++========++*+@@%++*#%=======*@@@+===+*#+%@@@=======++=#+#+@@@#======###=====%%*=*#%===@@%=+###======#=======#==========#==========++======#==========*.        
+:@:# -*-#:==@.     -+    .              -          -         -          =      +      ::                               ..      +         -                    #         :-     -:        :   - +:@@@=       *-:     #@%:+-.        :: @%#---.       =       +:=@@@#   *.*:@@@-      +    =%%*          +       .*@%:      +          =.        
+:@:#..*.#.#.%:..........................=..........-.........-..........=......*......:-...............................:.......+.........-....................#.........:-.....--.#......:..:@+-............*.......:=+.+..........::.+:=::.........=.......*%=......:@+=...........+...-@@@....@+@.=@@%.......@@@=.......+..........=.        
+:@:#:::**=*%::::::::::::::::::::::::::::=::::::::::=:::::::::=::::::::::+::::::*::::::--:::::::::::::::::::::::::::::::::::::::+:::::::::=::::::::::::::::::::%:::::::::-=:::::--:%@+::::-:::=:-::::::::::::*:::::::::::+::::::::::--::::--:::::::::+::::::::-+:::::::*:-:::::::::::*:::::::::::@*@-@@@-::::::::::::::::::+::::::::::=.        
+:@:#  -%= :.                            -          -  :      -          =      +    .=+:++                             ..      +   .     -                    #       .=+-     -: #.=+@@@.                  *          .+          ::    :.         =                               +                                     :          =.        
+:@:#  =%-.#.                       .##@@@#    +####%= -  ####%#.   +##@@@*     + .#@##@#-                          ##@@@#:     + :-+-####%#              -##@@@#.  .#@@@@#-    -: *@+:+:                    *          .+          ::    :.                                         +                                                =.        
+:@:#                                .@@@*          -  ==# .#@@      =@@@:      +   ::.                              #@@#.      + %%#. -#**                .@@@=       -.       -:   +                                              ::                                               +                                                =.        
+:@:#                                  .       .:%@@+. :.#:@@@-:.     ..        +  .=:                                .         + :=%=:-+@-:                ..       .=:        -:                                                  ::                                               +                                                =.        
+:@:#                                    :+..   -@@+   :=%                   ..:%=                                      .+:.    + *=+                          ..:*=            -:     ..... .......                                ::                                               +    ....                                        =.        
+:@:#                                        .=+==-:.   .*          ..:-=++*-.  +                                           .-+=*---.                 ..:-=+++-                 -:    +. :- *-.--+:                                 ::                                               +   -*+=#                                        =.        
+:@:#                                                ...::::::::::...           +                                               +   ...::::-----::::...                         -:    .:.:. :.....:.:     .==:       ==.      .==.  ::  :=-       -=-       -=:      .==.      :==   +    @::.                                        =.        
+:@:#                                                                           +                                               +                                               -:                                                  ::                                               +                                                =.        
+:@:#                 .==.                                                      +                                               +                                               -:                                                  ::           .-=+++++++++=:.                     +                                                =.        
+:@:#           .++.  :@@#                                                      +                                               +                                               -:                                          .=*=::::--::=*=  :-..              ..:=#+                +                             .:                 =.        
+:@:#-=+====+=--+@@*--=#*=-=----------------------------------------------------#-----------------------------------------------*--------------------=--------------------------++----------------------------------------+++-------+=-----=++=---------------=--------#+=-----------#----------==+=+***+++=-------==-----------------*.        
+:@:# -@++@+ @+ .++:.-+@%--+-                       -                           +                                       ..      +         -          -         *                -:                              .=      .@@@%       ::    :@@@+       -##.  :-#.          --   :=++**%++-    -=:.           .==:   ::                 =.        
+:@:#.=@+-*..%#.*@%:-***=%%#........................-.........-.................*............................-:.........:.......+.........=..........=.........#.........:-.....--...................*...........+.......+..........-:....-:.........+@@@...%##..@@%........:........+.....:................:.=.:+.::.................=.        
+:@:#.=@+#%+*-..:+=#*+....=#*............=..........-.........-..........+......*.................-:.........-:.........:.......+.........=..........=.........#.........--.....--........:..........*...........+.......+..........-:....-:.........+......-=%=@@@+.......*@@*......+....%*.+..............-+@=...::.................=.        
+:@:# -@++@-:#.    :#%#  =+*             -   ..     -         -          =      +      :          -:         ::    .    ..      +         =   *:     -         #         :-     -:        :          *.         .+      .+          ::    :.         =      +=*.=         -@@+.      +   ++#+.             .=:= *+.+:                 =.        
+:@:%=+@*+===@%=====*#====+==============*===++=====*=========+==========*======#======+==========++=========++===+%============*=========*===#@#==***=========%==========+=====++===================#===========#=======*==========++====++=========*==========*=========+==========#===#==================*@@+###===================+.        
+:@:# -@+=@-.@=     .             =.     -   -#* -%%=         -          =      +      :   :-     -:         ::  @%@..+%#.      +      .*@#   +.*+@@@:      :*@@         :-     -:.:      :          *.       -#%+      .+          ::    :.         =         .=         -          +   +.                 :.=                       =.        
+:@:#:::::::::::::::::::::::::::::+**::::=:::=-++@@@:::::::-@@@::::::::::+::::::*::::::-:::-#*::::=-::::::-@@@-::--%=%@@*:::::::+::::::@@@-:::+@#::::::::::-@@@-:::::::%@@=:::::--:*#:::::-:::::::+@@@:::::::+@@%:::::::::::::::::::-::::::::::::::::+::::::::::+:::::::::-::::::::::*:::*::::::::::::::::::::::::::::::::::::::::::::=.        
+:@:#                             =.# =@@@   :#*           %@@.      .@@@+      +      :   --= :@@@:      %@@-   @+#   :.       +      :.       *                     #@@+      -:..* :@@@:      .@@@                               ::                         .:         -          +   +.                                           =.        
+:@:#                             ==#.#%*.     +                     :%%=       +   +@@@   :+* *%#:              ..:.=.   .-+***#**+-.   .=:                           :.       -:.=% +@#.                   -:                     ::                                               +                                                =.        
+:@:#                       .:    ..%  --                             :.        +   -*=.   ..+                   .+:.           +           .:*+:                  .=-.         -:..#  .::               .*-.                       ::                                               +                                                =.        
+:@:#                         .+#++*%:    :+..                   ..-+           +     :=..   .            ..:+#-                +                  :=*#%%%%%%%*=:               -:  :      .+#*+===+*%*:                            ::                                               +                                                =.        
+:@:#                                         .-+++++=---==++++=:.              +         :=++++=+++++++=:.                     +                                               -:    :=:.+==-+*:-=:.                               ::                                               +  :=%+#                                         =.        
+:@:#                                                                           +                                               +                                               -:    +::*..#:: **:-=                               ::                                               +  .@*%-                                         =.        
+:@:#                                         ...:::-==+**#*######**#**+==-:::..+                                               +                    ...:::::...                -:                                                  ::                                               + .+*.                                           =.        
+:@:#                                .-====-:.                                  +.:-====-.                                      +               -=+-:.          :==+-           -:                                                  ::                                               +           :=++++==---==+++++=:                 =.        
+:@:#                  :=.      =+:..                         .                 +         ..-*-               .                 +         .  +:.                     ..=.       -:                   .                              ::                  .-+#%%#####%*=:              +       ==..                    ..-*.            =.        
+:@:#           .-+.  .**#  .-.          -                    -          =      +               .--:          :                 +         =                              :-     -:        :          *..::::-::::..                 ::           .:=*-.                  :=:         +     .        .=@@#              .=+.=:.-*+---+*+.        
+:@:#  *. :@-=: :%@*  -*=.               -                    -          =      +      :          -:          :                 +         =   *:                         :-     -:        :     :=++-*.            .:===          ..-:        .=-.                ..   . .   .       +    %@@+      :@@#.       =@@@.  :%@#  ..       =.        
+:@:%=*@@+=#@====##====@@%*#=============*===*+===============+==========*======#======+==========++==========+=================#=========*===#@#========#===============++=====++===========+*======#====+===========*#==*==%+=====+====+%==*==================#@@@===#@#=@@@%======#===*@@*=======+===========@@@=====##=*@@@=======*.        
+:@:#     .@+*= =@@=-+:*=*@@-            -   -%* :*#:         -          =      +      :          -:          :                 +         =   +.*+@@@:  .%%:.+#-         :-     -:        :-         *.   -#@ :**.   #@%: -#+       ::     .+#-      =@@@:     .**-    +:+-++.       +   =.         :.          +      =@@=**=        =.        
+:@:#::::-@-:::::**@%#::::=*=::::::::::::=:::=-++@@@:::::::-%@%::::::::::+::::::*::::::-::::::::::=-::::::-%*=-:::::::::::::::::*::::::=%@%:::*@#*-::::::++=@@@=:::::::#@@=:::::=-::::::::-:::::::-%@@::::=:@*@@@::::-=#=@@@#:::::::--::::-@@@=::::::+--::::::::+:::::::::=::::::::::*:::+::::::::::--::::::::::+:::::::**:+::::::::::+.        
+:@:#  =*           -**  %%#          :@@@   :@#-          %@@=      .%@@+      +      :        @@@:      *.%*                  +      @@@:     *+      .@%=:         %@@*      -:    :@@@:      .@@@:    -@@*       %#*.+          ::    :.         =         .=         -          +   =.         :.          +          +          =.        
+:@:#              +++    --         .%@%:     +-                    :@@+       +   -@@@       #@%-          -.                 +     .-.        +        +=:                   -:    *@%-                  @*       :--.+          ::    :.         =         .=         -          +   =.         :.          +          +          =.        
+:@:*===============+===========================*===============================*===#%#+========================*#****=========*%**#*============#=========++===================++===========================#===========#==========+=====+==========*==========*=========+==========*===*======================*==========#==========+.        
+.@@#.                                          -                                                                                                +         ::                                                *          .+                :.         =                                                                                          
+.+:                                         :                                                                                                          ..                                                =          .-                :.                                                                                                    
+..                                                                                                                                                                                                                                                                                                                                        
+                </code></pre></div>
+        <p>Reach out if you want me to work for you @ <a href="mailto:samjd101@gmail.com">samjd101@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const webdevLink = document.getElementById("webdevLink");
+    const musicLink = document.getElementById("musicLink");
+    const webdevSection = document.getElementById("webdevSection");
+    const musicSection = document.getElementById("musicSection");
+
+    function activateSection(section) {
+      if (section === "webdev") {
+        webdevSection.classList.add("active");
+        musicSection.classList.remove("active");
+        webdevLink.classList.add("active");
+        musicLink.classList.remove("active");
+      } else {
+        musicSection.classList.add("active");
+        webdevSection.classList.remove("active");
+        musicLink.classList.add("active");
+        webdevLink.classList.remove("active");
+      }
+    }
+
+    webdevLink.addEventListener("click", () => activateSection("webdev"));
+    musicLink.addEventListener("click", () => activateSection("music"));
+
+    webdevLink.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        activateSection("webdev");
+      }
+    });
+
+    musicLink.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        activateSection("music");
+      }
+    });
+  </script>
+</body>
+</html>
