@@ -21,5 +21,11 @@
     } else if (!isMobileOS && isMobilePage) {
       window.location.href = prefix + baseName;
     }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("img").forEach(img => {
+        img.loading = "lazy";
+      });
+    });
   })();
   
