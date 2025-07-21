@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script src="redirect.js"></script>
+  <style>
+
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+
+    h1 {
+    position: absolute;
+    bottom: -.1em;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 15vw;
+    font-weight: bold;
+    line-height: 0.85;
+    text-align: center;
+    transform: scaleX(1.3);
+    display: block;
+    z-index: -99;
+    }
+
+    nav {
+      position: absolute;
+      bottom: calc(8vw); 
+      left: 40%;
+      transform: translateX(-40%);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      margin: 0 0.3rem;
+      font-weight: bold;
+    }
+
+    nav a {
+        font-weight: normal !important;
+    }
+
+    .bio p {
+      margin: 0.3rem 0;
+    }
+
+    .links {
+      margin-top: 2rem;
+    }
+
+
+    .hidden {
+      display: none;
+    }
+
+    .section {
+      margin-top: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <div class="bio">
+    <p>Sam Dvorin is a musician.</p>
+    <p>Sam Dvorin is a composer.</p>
+    <p>Sam Dvorin is a drummer.</p>
+    <p>Sam Dvorin started playing the drums when he was in fourth grade.</p>
+    <p>Sam Dvorin likes to bike.</p>
+    <p>Sam Dvorin is a programmer.</p>
+    <p>Sam Dvorin is a student.</p>
+    <p>Sam Dvorin prefers to be cold than to be hot.</p>
+    <p>Sam Dvorin is a pianist.</p>
+    <p>Sam Dvorin was born in 2002 in Ohio.</p>
+    <p>Sam Dvorin<a href="DVORINSAM-urop-summer24.pdf" target="_blank">built harps in the summer of 2024</a></p>
+    <p>Sam Dvorin studied music composition with Joshua Fineberg at Boston University.</p>
+    <p>Sam Dvorin once sprained his wrist biking and had to drum one handed for a month.</p>
+    <p>Sam Dvorin likes a human element in his art either through movement or text.</p>
+    <p>Sam Dvorin has aphantasia.</p>
+    <p>Sam Dvorin cleans his room regularly.</p>
+    <p>Sam Dvorin is a teacher.</p>
+    <p>Sam Dvorin has been in a lot of bands, including Corporeal, Video Days, Jimrat, Kayde Hazel, Nowhere, JOBIE, and The P.A.'s.</p>
+    <p>Sam Dvorin studied Computer Science at Boston University.</p>
+    <p>Sam Dvorin really likes cats but is allergic to them.</p>
+  </div>
+  <div class="bio">
+    <p>Sam Dvorin is on<a href="https://www.instagram.com/dvorin_______ii/" target="_blank">instagram</a></p>
+    <p>Sam Dvorin is on<a href="https://soundcloud.com/samuel-dvorin" target="_blank">soundcloud</a></p>
+    <p>Sam Dvorin is on<a href="https://open.spotify.com/artist/1mOrWYyQred1AqC6oPstO4?si=axGdeuq7SaSDPwFqf2NkNQ" target="_blank">spotify</a></p>
+    <p>Sam Dvorin is on<a href="https://www.ninaprotocol.com/profiles/dvorin?ref=dvorin" target="_blank">nina</a></p>
+    <p>Sam Dvorin is on<a href="https://github.com/dvorins" target="_blank">github</a></p>
+    <p>Sam Dvorin is on<a href="https://whoisrecords.bandcamp.com/" target="_blank">who is records</a></p>
+
+    
+
+    
+  </div>
+
+  <div class="links">
+    <a href="2024cv-dvorin.pdf" target="_blank">cv</a>
+    <a onclick="showSection('contact')">contact</a>
+  </div>
+
+  <div id="cv" class="section hidden">
+    <iframe src="sam-dvorin-cv.pdf" title="Sam Dvorin CV PDF"></iframe>
+  </div>
+
+  <div id="contact" class="section hidden">
+    <a href="mailto:samjd101@gmail.com" target="_blank">email</a><br>
+    <a href="https://soundcloud.com/samuel-dvorin" target="_blank">soundcloud</a><br>
+    <a href="https://open.spotify.com/artist/1mOrWYyQred1AqC6oPstO4?si=Hx9ueHs3S8ucVMCYp6spXQ" target="_blank">spotify</a>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('contact').classList.add('hidden');
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+
+<nav>
+    <a href="index.html">back</a>
+    <a href="music.html">music</a>
+    <a href="archive.html">archive</a>
+    <a href="hire.html">for hire</a>
+  </nav>
+  <h1>dvorin</h1>
+
+</body>
+</html>
